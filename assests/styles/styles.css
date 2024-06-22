@@ -4,8 +4,15 @@
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Outfit';
+    src: url('./../src/font/Outfit.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
 html {
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  --font: "Outfit", sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-title: Georgia, 'Times New Roman', Times, serif;
   --font-size: 1.2rem;
@@ -32,7 +39,7 @@ button {
 h1,
 h2,
 h3 {
-  font-family: var(--font-title);
+  font-family: var(--font);
 }
 
 h1,
@@ -65,6 +72,7 @@ label {
 header {
     background: #040505;
     padding: 10px 0;
+    transition: all .2s;
 }
 
 header .container {
@@ -74,18 +82,45 @@ header .container {
 }
 
 header img {
-    width: 200px;
+    width: 250px;
+    transition: all .8s;
 }
 
 header nav ul li a {
     color: #F2EFF8;
     font-size: 18px;
+    transition: all .8s;
 }
 
 header nav ul {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(5, 5, 5); 
+    z-index: 1000;
+    transition: all .2s;
+}
+
+.fixed-header img {
+    width: 180px;
+    transition: all .8s;
+}
+
+.fixed-header nav ul li a {
+    font-size: 14px;
+    transition: all .8s;
+}
+
+.fixed-header nav ul {
+    padding: 0;
+    margin: 8px;
 }
 
 #banner img {
