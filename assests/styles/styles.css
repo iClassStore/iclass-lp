@@ -1,0 +1,282 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-title: Georgia, 'Times New Roman', Times, serif;
+  --font-size: 1.2rem;
+  --color: #19f;
+  --color-light: #adf;
+  --color-dark: #018;
+  --radius: 0.2rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F7F7F7;
+}
+
+body,
+input,
+textarea,
+button {
+  font-size: var(--font-size);
+  font-family: var(--font);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 1rem 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+header {
+    background: #040505;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header img {
+    width: 200px;
+}
+
+header nav ul li a {
+    color: #F2EFF8;
+    font-size: 18px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#banner img {
+    object-fit: cover;
+    /*max-width: 100%;*/
+    width: 100%;
+}
+
+.banner_mobile {
+    display: none;
+}
+
+#widgets {
+    background: #Fff;
+}
+
+#widgets .container {
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+
+}
+
+#widgets .widgets, 
+#widgets .widgets a{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#widgets .widgets img, 
+#widgets .widgets a img {
+    width: 30px;
+    margin: 0 auto;
+}
+
+#widgets .widgets a:hover h2,
+#widgets .widgets a:hover p {
+    color: #BFBDBb;
+}
+
+#widgets .widgets_body h2,
+#widgets a .widgets_body h2 {
+    font-size: 18px;
+    color: rgba(5, 5, 5);
+}
+
+#widgets .widgets_body p,
+#widgets a .widgets_body p {
+    color: rgba(5, 5, 5);
+    font-size: 14px;
+}  
+
+#gallery .container  {
+    padding: 30px 10px;
+}
+
+#gallery .container .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+#gallery .container .gallery .gallery_content {
+    padding: 0;
+    margin: 0;
+}   
+
+#gallery .container .gallery img {
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+    height: 500px;;
+    transition: all .5s;
+}
+
+#gallery .container .gallery .gallery_content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+#gallery .container .gallery .overlay_products {
+    background: rgba(5, 5, 5, .6);
+    position: absolute;
+    top: 0;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #F2EFF8;
+}
+
+#gallery .container .gallery .overlay_products  h2 {
+    font-size: 24px;
+}
+
+#gallery .container .gallery .overlay_products a {
+    border: none;
+    background: none;
+    background:rgba(5, 5, 5);
+    color: #F2EFF8;
+    padding: 8px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#gallery .container .gallery .overlay_products a:hover {
+    background:rgba(5, 5, 5, .6);
+}
+
+#gallery .container .gallery .gallery_content:hover  img {
+    transform: scale(1.2);
+}
+
+footer {
+    background: rgba(5, 5, 5);
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 10px;
+}
+
+footer .social_network img {
+    width: 20px;
+}
+
+footer .payments {
+    display: flex;
+    gap: 20px;
+}
+
+footer .text_footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: normal;
+}
+
+footer .text_footer p {
+    color: #F2EFF8;
+    font-size: 18px;;
+}
+
+@media (max-width: 860px) {
+    #gallery .container .gallery {
+        grid-template-columns: 1fr 1fr;
+        padding: 80px 20px;
+    }
+
+    #widgets .container {
+        flex-wrap: wrap;
+        padding: 80px;
+        justify-content: center;
+        gap: 20px;
+    }
+    .banner_desktop {
+        display: none;
+    }
+
+    .banner_mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 580px) {
+    #gallery .container .gallery {
+        grid-template-columns: 1fr;
+    }
+    footer .text_footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    header nav ul {
+        gap: 28px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+}
