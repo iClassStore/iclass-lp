@@ -310,9 +310,30 @@ footer .text_footer p {
 
     header nav ul {
         gap: 28px;
+        padding: 0;
     }
 
     header nav ul li a {
         font-size: 14px;
+    }
+
+    #gallery .container {
+        padding: 0;
+    }
+
+    #gallery .container .gallery {
+        padding: 0;
+        gap: 0;
+    }
+
+    #gallery .container .gallery .gallery_content {
+        border-radius: 0;
+    }
+    #gallery .container .gallery .overlay_products {
+        border-radius: 0;
+    }
+
+    #gallery .container .gallery img {
+        border-radius: 0;
     }
 }
