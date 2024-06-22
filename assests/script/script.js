@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
 
 
 // Smooth Scroll
-const linksInternos = document.querySelectorAll("header .container a");
+const linksInternos = document.querySelectorAll(".main_navigation a");
 
 const scrollToSection = (event) => {
     event.preventDefault();
