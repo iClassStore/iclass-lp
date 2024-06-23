@@ -349,7 +349,8 @@ footer .text_footer p {
         padding: 0;
     }
 
-    header nav ul li a {
+    header nav ul li a,
+    .fixed-header nav ul li a  {
         font-size: 12px;
     }
 
